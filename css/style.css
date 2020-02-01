@@ -1,0 +1,128 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, p, a, img, ul, li, table, tr, th, td, tbody, footer, header, main, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #333;
+}
+
+.flex_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+li, ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.inner {
+  width: 1100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.wrap {
+  overflow: hidden;
+}
+
+
+.menu, .menu span {
+  display: inline-block;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu {
+  position: fixed;
+  top: 20px;
+  left: 25px;
+  width: 35px;
+  height: 22px;
+  z-index: 10;
+}
+.menu span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  z-index: 10;
+}
+.menu span:nth-of-type(1) {
+  top: 0px;
+}
+.menu span:nth-of-type(2) {
+  top: 10px;
+}
+.menu span:nth-of-type(3) {
+  bottom: 0px;
+}
+.menu.active span:nth-of-type(1) {
+  -webkit-transform: translateY(10px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
+}
+.menu.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
+}
+#nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+}
+#nav.active {
+  right: 0;
+  opacity: 1;
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
+}
+#nav ul {
+  margin: 20px 0;
+  padding: 20px 0;
+}
+#nav ul li {
+  list-style-type: none;
+}
+#nav ul li a {
+  display: block;
+  padding: 20px 0;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+#nav ul li a:hover {
+  color: #f65d5d;
+}
+/*# sourceMappingURL=style.css.map */
